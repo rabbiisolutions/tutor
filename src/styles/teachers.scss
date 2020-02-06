@@ -1,0 +1,98 @@
+$desktop: 768px;
+$monitor: 1024px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
+
+.teacher {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 4vw;
+    @include desktop {
+        width: 40%;
+        margin: 0 1.5vw 3vw;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #fafafa;
+    }
+    padding: 0 2vw;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    .title {
+        text-transform: capitalize;
+        font-size: 5vw;
+        margin-left: 3vw;
+        @include desktop {
+            font-size: 2vw;
+        }
+        @include monitor {
+            font-size: 1.5vw;
+        }
+    }
+
+    h2 {
+        display: flex;
+        align-items: center;
+        margin: 4vw 0 1vw;
+        @include desktop {
+            margin-left: 1.75vw;
+        }
+    }
+
+    .desc {
+        font-weight: 300;
+        margin: 1vw 1vw 2vw;
+        @include desktop {
+            font-size: 1.75vw;
+        }
+        @include monitor {
+            font-size: 1.25vw;
+        }
+    }
+}
+
+@include desktop {
+    .teacher:hover {
+        transform: scale(1.1);
+        transition: all 1s ease-in-out;
+    }
+
+    #teacher-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 3vw auto;
+    }
+
+    #teachers {
+        margin: 3vw 0;
+    }
+}
+
+.teacher::after {
+    background: #27A1DA;
+    border-radius: 5px 5px 0 0;
+    content: "";
+    max-height: 3vw;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    z-index: 5;
+    @include desktop {
+        display: block;
+    }
+}

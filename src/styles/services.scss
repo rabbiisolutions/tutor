@@ -1,0 +1,131 @@
+$desktop: 800px;
+$monitor: 1192px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 15;
+    vertical-align: baseline;
+    left: 2.25vw;
+    top: 2.25vw;
+    @include desktop {
+        margin-right: 6vw;
+        width: 60%;
+    }
+}
+
+#service-list {
+    .service {
+        @include desktop {
+            display: flex;
+            margin-bottom: 12vw;
+            align-items: center;
+
+            .text {
+                width: 75%;
+            }
+        }
+    }
+    .service:nth-child(even) {
+        @include desktop {
+            flex-direction: row-reverse;
+            .service-image {
+                margin-right: 0;
+                margin-left: 5vw;
+                left: 0;
+            }
+        }
+    }
+
+    .service:nth-child(7) {
+        @include desktop {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#services {
+    padding-bottom: 9vw;
+    @include desktop {
+        margin-top: 5vw;
+    }
+
+    h4 {
+        margin-left: 6vw;
+        @include desktop {
+            margin-left: 12vw;
+        }
+    }
+}
+
+.service {
+    position: relative;
+    width: 70%;
+    hr {
+        width: 70px;
+        border: 2px solid #27A1DA;
+        margin-left: 0;
+    }
+    margin: 6rem auto;
+
+    p {
+        @include desktop {
+            font-size: 1.5vw;
+        }
+        font-weight: 300;
+    }
+
+    li {
+        margin: 1vw 0;
+        @include desktop {
+            font-size: 1.125vw;
+        }
+    }
+
+    .services {
+        margin-top: 1.5vw;
+    }
+}
+
+.service::after {
+    background: #27A1DA;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    max-width: 56vw;
+    max-height: 44vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 85%;
+    z-index: 0;
+
+    @include desktop {
+        max-width: 28vw;
+        max-height: 29.75vw;
+    }
+}
+
+.service:nth-child(even)::after {
+    left: 25vw;
+
+    @include desktop {
+        left: 43.5vw;
+    }
+}

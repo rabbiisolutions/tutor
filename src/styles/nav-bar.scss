@@ -1,0 +1,159 @@
+$colors: (
+    // navBar
+        alabaster: #FAFAFA, mirage: #1B2531, purple: #A600C0,
+        curiosBlue: #27A1DA,
+    // content
+        deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
+        mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
+        mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
+        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC,
+    // borders and accordion
+        silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
+    // footer
+        nobel: #B7B7B7,
+    // stars
+        oldGold: #D4AF37, silver: #C4C4C4,
+    // space
+        white: #FFFFFF
+);
+
+@function color($name) {
+    @return map_get($colors, $name);
+}
+
+$pointer: pointer;
+$navBarHeight: 3.5em;
+$webkitRadius : 10em;
+$borderRadius: 10em;
+$font16: 1em;
+$desktop: 800px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+#nav-bar {
+    background-color: color(alabaster);
+    height: $navBarHeight;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(27, 37, 49, 0.25);
+    @include desktop {
+        align-items: unset;
+    }
+
+    .logo {
+        display: inline-block; // can't apply max width without inline-block or block
+        max-width: 90px; // propagate to all logos (avoids large width on IE)
+        cursor: $pointer;
+        margin: 5px 0;
+    }
+    .logo span svg:hover {
+        transform: scale(1.1);
+    }
+
+    button {
+        -webkit-border-radius: $webkitRadius;
+        border-radius: $borderRadius;
+        background-color: color(white);
+        color: color(curiosBlue);
+        border-width: 1px;
+        border-style: solid;
+        border-color: color(curiosBlue);
+        @include desktop {
+            border-width: 2px;
+            font-weight: 600;
+            padding: .5em 1.5em;
+        }
+        padding: .4em 1.5em;
+        cursor: $pointer;
+        font-size: $font16;
+        margin: 8px 0;
+    }
+
+    button:hover {
+        background-color: color(white);
+    }
+
+    .toggle span{
+        fill: color(mirage);
+        cursor: $pointer;
+    }
+
+    .nav {
+        display: none;
+        font-weight: 300;
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0 0;
+            min-width: fit-content;
+            cursor: $pointer;
+            text-decoration: none;
+            color: color(mirage);
+            margin: 0 .4375vw;
+            height: available;
+            .text {
+                margin: 5px .625vw 0;
+            }
+
+            .active {
+                background-color: color(mirage);
+                height: 5px;
+                margin-top: 9px;
+            }
+        }
+
+        .nav-item:hover {
+            font-weight: bold;
+            color: color(deepSeaGreen);
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    @include desktop {
+        .nav {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .nav-item.active {
+            color: color(deepSeaGreen);
+            font-weight: bold;
+        }
+    }
+
+    .toggle {
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .toggle {
+        display: flex;
+        justify-content: flex-end;
+        width: 50px;
+        padding: 0 3vw;
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .toggle span svg{
+        cursor: $pointer;
+    }
+    .toggle span svg:hover {
+        transform: scale(1.1);
+    }
+}

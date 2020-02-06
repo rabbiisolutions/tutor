@@ -1,0 +1,190 @@
+$colors: (
+    // navBar
+        alabaster: #FAFAFA, mirage: #1B2531, purple: #A600C0,
+        curiosBlue: #27A1DA,
+    // content
+        deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
+        mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
+        mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
+        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC,
+    // borders and accordion
+        silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
+    // footer
+        nobel: #B7B7B7,
+    // stars
+        oldGold: #D4AF37, silver: #C4C4C4,
+    // space
+        white: #FFFFFF
+);
+
+@function color($name) {
+    @return map_get($colors, $name);
+}
+$pointer: pointer;
+$navBarHeight: 3.5em;
+$webkitRadius : 10em;
+$borderRadius: 10em;
+$font16: 1em;
+
+$desktop: 768px;
+$monitor: 1192px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
+    width: 100%;
+    color: color(mirage);
+}
+
+a {
+    text-decoration: none;
+    color: color(mirage);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: color(curiosBlue);
+}
+
+button:hover, .btn-link:hover, .social span svg:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.page-mask {
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+}
+
+main {
+    margin-top: $navBarHeight;
+    display: block;
+}
+
+.info {
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 5vw;
+    text-align: center;
+
+    @include desktop {
+        margin-left: 6vw;
+        font-size: 2.25vw;
+        text-align: left;
+    }
+
+    @include monitor {
+        font-size: 2.5vw;
+        text-align: left;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.dark {
+    background-color: color(gallery);
+}
+
+.btn-link {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    cursor: $pointer;
+    text-decoration: none;
+    font-size: 1.25vw;
+    display: inline-block;
+    border-color: color(curiosBlue);
+    border-style: solid;
+    text-align: center;
+    background-color: color(curiosBlue);
+    color: color(white);
+}
+
+.btn-link:hover {
+    border-color: #27A1DA;
+    background-color: #ffffff;
+    color: #27A1DA;
+}
+
+.client-btn, .tutor-btn {
+    padding: .7rem 1.2rem;
+    margin: 3vw 4vw 1.25vw;
+    @include desktop {
+        margin: .5vw 2vw 1.25vw;
+    }
+    border-width: 1px;
+    font-size: .9em;
+}
+
+.tutor-btn {
+    margin: 3vw 4vw 1.25vw;
+    @include desktop {
+        margin: .5vw 2vw 1.25vw;
+    }
+}
+
+.client-btn:hover, .tutor-btn:hover {
+    border-width: 2px;
+}
+
+.services {
+    padding: .5rem 1.5rem;
+    font-size: 1.25rem;
+}
+
+#how-teecha-works {
+    background-color: #EEEEEE;
+    padding: 3vw 5vw 7vw;
+}
+
+.how-icon {
+    border: 1px solid color(mirage25);
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.learn {
+    margin: 3vw 0 0 5vw;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #27A1DA;
+    display: block;
+}
+.learn:hover {
+    color: #A600C0;
+}
