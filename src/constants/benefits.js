@@ -28,8 +28,8 @@ const support = {
       'vitae etiam turpis eu cras. Vitae platea.'
 };
 
-const teachers = {
+const benefits = {
   support: support, relationship: relationship, income: income, trusted: trusted
 };
 
-export default teachers;
+export default benefits;

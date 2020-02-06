@@ -13,7 +13,7 @@ $monitor: 1024px;
     }
 }
 
-.teacher {
+.teacher, .benefit {
     position: relative;
     width: 90%;
     margin: 0 auto 4vw;
@@ -21,13 +21,11 @@ $monitor: 1024px;
         width: 40%;
         margin: 0 1.5vw 3vw;
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-        background-color: #fafafa;
     }
     padding: 0 2vw;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #ffffff;
 
     .title {
         text-transform: capitalize;
@@ -62,25 +60,33 @@ $monitor: 1024px;
     }
 }
 
+.teacher {
+    background-color: #ffffff;
+}
+
+.benefit {
+    background-color: #fafafa;
+}
+
 @include desktop {
-    .teacher:hover {
+    .benefit:hover, .teacher:hover {
         transform: scale(1.1);
         transition: all 1s ease-in-out;
     }
 
-    #teacher-list {
+    #benefit-list, #teacher-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 3vw auto;
     }
 
-    #teachers {
-        margin: 3vw 0;
+    #benefits, #teachers {
+        padding: 3vw 0;
     }
 }
 
-.teacher::after {
+.benefit::after, .teacher::after {
     background: #27A1DA;
     border-radius: 5px 5px 0 0;
     content: "";

@@ -15,7 +15,7 @@ import gamesJpeg from "../assets/images/areas/jCIMcOpFHig-6.png";
 import gamesWebp from "../assets/images/areas/jCIMcOpFHig-6.webp";
 
 const kcse = {
-  title: 'Pass KCPE/KCSE',
+  title: 'KCPE/KCSE',
   desc: ['We provide competent teachers to help your child revise for the national exams',
     'Get a tutor for any class in:'],
   examples: ListItem(
@@ -25,20 +25,20 @@ const kcse = {
       ]
   ),
   images: {jpeg: kcseJpeg, webp: kcseWebp},
-  link: "https://forms.gle/rd339azC1NoXo1YB6"
+  link: "#"
 };
 const international = {
-  title: 'Tutors for International School Systems',
+  title: 'International School Systems',
   desc: ['We provide teachers teaching different international schools & ready to help your child',
     'Get a tutor in:'],
   examples: ListItem(
       [{key: 'c1', text: 'IGCSE'}, {key: 'c2', text: 'American'}, {key: 'c3', text: 'IB...etc'}]
   ),
   images: {jpeg: interJpeg, webp: interWebp},
-  link: "https://forms.gle/7fkAVe5DHNwomAJWA"
+  link: "#"
 };
 const tests = {
-  title: 'Pass Your Tests',
+  title: 'Tests',
   desc: ['We help you pass your KASNEB exams or any university exam or any tests to join universities' +
   ' abroad', 'Get a tutor for:'],
   examples: ListItem(
@@ -46,10 +46,10 @@ const tests = {
         {key: 'd4', text: 'ACT'}, {key: 'd5', text: 'Statistics...etc'}]
   ),
   images: {jpeg: testsJpeg, webp: testsWebp},
-  link: "https://forms.gle/edZLndJ9WuNb48u39"
+  link: "#"
 };
 const sports = {
-  title: 'Learn New Sports Games',
+  title: 'Sports Games',
   desc: ['We provide professional trainers to help you or your child grow in certain sports & games.',
     ' You can get a tutor in:'],
   examples: ListItem(
@@ -57,10 +57,10 @@ const sports = {
         {key: 'b3', text: 'Skating...etc'}]
   ),
   images: {jpeg: gamesJpeg, webp: gamesWebp},
-  link: "https://forms.gle/EZZya9AMuVcqC2eh8"
+  link: "#"
 };
 const language = {
-  title: 'Speak a Foreign Language',
+  title: 'Foreign Languages',
   desc: ['We provide teachers in foreign language to help you learn or master a foreign language.',
     'You can get a tutor in:'],
   examples: ListItem(
@@ -68,10 +68,10 @@ const language = {
         {key: 'a3', text: 'German etc'}]
   ),
   images: {jpeg: languageJpeg, webp: languageWebp},
-  link: "https://forms.gle/RFwpeWNTrf2kZTJ9A"
+  link: "#"
 };
 const hobbies = {
-  title: 'Developing your Hobbies and Interests',
+  title: 'Hobbies and Interests',
   desc:['We provide trainers to help you grow & perfect a hobby you have.',
     'You can get a trainer in:'],
   examples: ListItem(
@@ -80,7 +80,7 @@ const hobbies = {
         {key: 'e9', text: 'Dj...etc'}]
   ),
   images: {jpeg: hobbiesJpeg, webp: hobbiesWebp},
-  link: "https://forms.gle/EZZya9AMuVcqC2eh8"
+  link: "#"
 };
 const specialNeeds = {
   title: 'Special Needs',
@@ -94,7 +94,7 @@ const specialNeeds = {
         {key: 'f6', text: 'Behavioural/Emotional'}, {key: 'f7', text: 'Sensory/Impaired...etc'}]
   ),
   images: {jpeg: specialJpeg, webp: specialWebp},
-  link: "https://forms.gle/wWkfoAQbSgDzrtoY7"
+  link: "#"
 };
 
 const areas = {

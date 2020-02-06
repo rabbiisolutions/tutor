@@ -23,11 +23,8 @@ const premium = {
       ' their peers and have had a vast experience teaching at top national and private schools.'
 };
 
-const description = 'Overall cost of tuition is dependent on the ' +
-    'type of teacher you choose.';
-
 const teachers = {
-  premium: premium, plus: plus, choice: choice, basic: basic, description: description
+  premium: premium, plus: plus, choice: choice, basic: basic
 };
 
 export default teachers;

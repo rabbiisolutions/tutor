@@ -6,13 +6,12 @@ $colors: (
         deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
         mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
         mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
-        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC,
+        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC, robinsEggBlue: #00C3F0,
+        black: #000000,
     // borders and accordion
         silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
     // footer
         nobel: #B7B7B7,
-    // stars
-        oldGold: #D4AF37, silver: #C4C4C4,
     // space
         white: #FFFFFF
 );
@@ -65,7 +64,7 @@ a:hover {
     color: color(curiosBlue);
 }
 
-button:hover, .btn-link:hover, .social span svg:hover {
+.btn-link:hover, .social span svg:hover {
     transform: scale(1.1);
 }
 
@@ -88,10 +87,11 @@ main {
     display: block;
 }
 
-.info {
-    font-weight: 300;
-    font-size: .8em;
-    text-align: center;
+.dark {
+    background-color: #fafafa;
+    @include desktop {
+        background-color: #EEEEEE;
+    }
 }
 
 .section-title {
@@ -100,23 +100,12 @@ main {
     text-align: center;
 
     @include desktop {
-        margin-left: 6vw;
-        font-size: 2.25vw;
-        text-align: left;
+        font-size: 2.5vw;
     }
 
     @include monitor {
         font-size: 2.5vw;
-        text-align: left;
     }
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.dark {
-    background-color: color(gallery);
 }
 
 .btn-link {
@@ -134,12 +123,11 @@ main {
 }
 
 .btn-link:hover {
-    border-color: #27A1DA;
-    background-color: #ffffff;
-    color: #27A1DA;
+    background-color: color(white);
+    color: color(curiosBlue);
 }
 
-.client-btn, .tutor-btn {
+.tutor-btn {
     padding: .7rem 1.2rem;
     margin: 3vw 4vw 1.25vw;
     @include desktop {
@@ -149,14 +137,7 @@ main {
     font-size: .9em;
 }
 
-.tutor-btn {
-    margin: 3vw 4vw 1.25vw;
-    @include desktop {
-        margin: .5vw 2vw 1.25vw;
-    }
-}
-
-.client-btn:hover, .tutor-btn:hover {
+.tutor-btn:hover {
     border-width: 2px;
 }
 
@@ -165,26 +146,59 @@ main {
     font-size: 1.25rem;
 }
 
-#how-teecha-works {
-    background-color: #EEEEEE;
-    padding: 3vw 5vw 7vw;
-}
-
-.how-icon {
-    border: 1px solid color(mirage25);
-    border-radius: 5px;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.learn {
-    margin: 3vw 0 0 5vw;
+.refer {
+    margin-bottom: 3vw;
+    padding: .5rem 1.75rem;
     font-size: 1.5rem;
+    @include desktop {
+        margin-bottom: 0;
+        font-size: 1.125rem;
+    }
+    @include monitor {
+        font-size: 1.5rem;
+    }
+}
+
+.info {
     font-weight: 300;
-    text-decoration: underline;
-    color: #27A1DA;
-    display: block;
+    font-size: .8em;
+    text-align: center;
 }
-.learn:hover {
-    color: #A600C0;
+
+.refer-text {
+    @include desktop {
+        font-size: 1.125vw;
+        margin: 0 0 1vw 0;
+    }
 }
+
+.bold {
+    font-weight: bold;
+}
+
+#desktop-view {
+    display: none;
+    @include desktop {
+        display: block;
+        .section-title {
+            margin-bottom: 0;
+        }
+
+        .section-desc {
+            margin-top: .5vw;
+        }
+    }
+}
+
+.section-desc {
+    font-weight: 300;
+    text-align: center;
+    font-size: 4vw;
+    @include desktop {
+        font-size: 1.5vw;
+    }
+    @include monitor {
+        font-size: 1.25vw;
+    }
+}
+

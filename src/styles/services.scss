@@ -13,7 +13,7 @@ $monitor: 1192px;
     }
 }
 
-.service-image {
+.area-image {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -29,8 +29,8 @@ $monitor: 1192px;
     }
 }
 
-#service-list {
-    .service {
+#area-list {
+    .area {
         @include desktop {
             display: flex;
             margin-bottom: 12vw;
@@ -41,10 +41,10 @@ $monitor: 1192px;
             }
         }
     }
-    .service:nth-child(even) {
+    .area:nth-child(even) {
         @include desktop {
             flex-direction: row-reverse;
-            .service-image {
+            .area-image {
                 margin-right: 0;
                 margin-left: 5vw;
                 left: 0;
@@ -52,17 +52,17 @@ $monitor: 1192px;
         }
     }
 
-    .service:nth-child(7) {
+    .area:nth-child(7) {
         @include desktop {
             margin-bottom: 0;
         }
     }
 }
 
-#services {
+#areas {
     padding-bottom: 9vw;
     @include desktop {
-        margin-top: 5vw;
+        padding-top: 5vw;
     }
 
     h4 {
@@ -73,7 +73,7 @@ $monitor: 1192px;
     }
 }
 
-.service {
+.area {
     position: relative;
     width: 70%;
     hr {
@@ -102,7 +102,7 @@ $monitor: 1192px;
     }
 }
 
-.service::after {
+.area::after {
     background: #27A1DA;
     border-radius: 5px;
     content: "";
@@ -122,7 +122,7 @@ $monitor: 1192px;
     }
 }
 
-.service:nth-child(even)::after {
+.area:nth-child(even)::after {
     left: 25vw;
 
     @include desktop {

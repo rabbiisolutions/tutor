@@ -82,7 +82,9 @@ $desktop: 800px;
     }
 
     button:hover {
-        background-color: color(white);
+        background-color: color(curiosBlue);
+        color: color(white);
+        transition: all .5s ease-in-out;
     }
 
     .toggle span{
@@ -109,7 +111,7 @@ $desktop: 800px;
             }
 
             .active {
-                background-color: color(mirage);
+                background-color: color(curiosBlue);
                 height: 5px;
                 margin-top: 9px;
             }
@@ -131,6 +133,9 @@ $desktop: 800px;
         .nav-item.active {
             color: color(deepSeaGreen);
             font-weight: bold;
+        }
+        .nav-item.active:hover {
+            text-shadow: none;
         }
     }
 
