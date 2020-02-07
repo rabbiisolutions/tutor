@@ -22,8 +22,11 @@ const Landing = () => {
             <p>{texts.quotes[1]}</p>
             <p>{texts.quotes[2]}</p>
             <p>{texts.quotes[3]}</p>
+            <div id={'sign-up'}>
+              <p className={'lead'}>Sign up to receive our price list (teacher/tutor only)</p>
+              <ButtonLink value={texts.signUp} link={"#"} className="services"/>
+            </div>
           </div>
-          <ButtonLink value={texts.signUp} link={"#"} className="services"/>
         </div>
       </Router>
   )

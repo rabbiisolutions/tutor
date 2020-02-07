@@ -1,4 +1,5 @@
 $desktop: 768px;
+$monitor: 1024px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -6,6 +7,11 @@ $desktop: 768px;
     }
 }
 
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
 #landing {
     padding: 5vw 4vw;
     background-image: url("../assets/images/landing/desktop.jpg");
@@ -40,9 +46,6 @@ $desktop: 768px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .services {
-        margin-top: 2vw;
-    }
     @include desktop {
         width: 50%;
         margin-left: 7vw;
@@ -50,11 +53,11 @@ $desktop: 768px;
     #dark-box {
         font-size: 5vw;
         @include desktop {
-            color: #ffffff;
+            color: #00C3F0;
             font-size: 2.375vw;
             padding: 1vw;
             text-align: center;
-            background: rgba(0, 0, 0, 0.58);
+            background: rgba(0, 0, 0, 0.65);
             border-radius: 10px;
         }
     }
@@ -65,6 +68,34 @@ $desktop: 768px;
             margin: 2vw 1vw;
             text-align: unset;
             font-weight: 600;
+        }
+    }
+    #sign-up {
+        text-align: center;
+        background-color: #ECECEC;
+        padding: .5vw 3vw 6vw;
+        margin: 0 auto;
+        width: 70%;
+        border-radius: 10px;
+        @include desktop {
+            background-color: unset;
+            padding: 0;
+            width: unset;
+        }
+        p {
+            font-size: 4.5vw;
+            font-weight: 600;
+            @include desktop {
+                margin-bottom: 1vw;
+                margin-top: 4vw;
+                color: #ffffff;
+                font-size: 1.75vw;
+            }
+            @include monitor {
+                margin-bottom: .75vw;
+                margin-top: 5.5vw;
+                font-size: 1.25vw;
+            }
         }
     }
 }
