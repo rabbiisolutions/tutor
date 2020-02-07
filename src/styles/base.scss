@@ -26,7 +26,7 @@ $borderRadius: 10em;
 $font16: 1em;
 
 $desktop: 768px;
-$monitor: 1192px;
+$monitor: 1024px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -142,13 +142,16 @@ main {
 }
 
 .services {
-    padding: .5rem 1.5rem;
+    padding: .4rem 1.4rem;
     font-size: 1.25rem;
+    @include monitor {
+        padding: .5rem 1.5rem;
+    }
 }
 
 .refer {
     margin-bottom: 3vw;
-    padding: .5rem 1.75rem;
+    padding: .45rem 1.75rem;
     font-size: 1.5rem;
     @include desktop {
         margin-bottom: 0;

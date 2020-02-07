@@ -1,4 +1,4 @@
-$desktop: 800px;
+$desktop: 768px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -14,36 +14,56 @@ $desktop: 800px;
     background-size: cover;
 }
 
+#mobile-landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    padding-bottom: 3vw;
+    @include desktop {
+        display: none;
+    }
+}
+
 @include desktop {
     .landing-image {
         display: none;
     }
 }
 
+.landing-image {
+    width: 100%;
+    height: auto;
+}
+
 .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .services {
         margin-top: 2vw;
     }
     @include desktop {
         width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-left: 7vw;
     }
     #dark-box {
         @include desktop {
-            color: #0E3E77;
+            color: #ffffff;
             font-size: 2.375vw;
             padding: 1vw;
             text-align: center;
+            background: rgba(0, 0, 0, 0.58);
+            border-radius: 10px;
         }
-        background: rgba(196, 196, 196, 0.58);
-        border-radius: 10px;
     }
     p {
+        font-weight: bold;
+        text-align: center;
         @include desktop{
             margin: 2vw 1vw;
+            text-align: unset;
+            font-weight: 600;
         }
     }
 }

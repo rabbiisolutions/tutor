@@ -2,7 +2,7 @@ import Icon from "./basic/Icon";
 import React from "react";
 import { BrowserRouter as Router } from 'react-router-dom';
 
-const HowToGet = (props) => {
+const HowToBe = (props) => {
   return (
       <Router>
         <div className={'become-icon'}>
@@ -12,4 +12,4 @@ const HowToGet = (props) => {
   );
 };
 
-export default HowToGet;
+export default HowToBe;

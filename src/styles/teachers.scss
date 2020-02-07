@@ -42,9 +42,10 @@ $monitor: 1024px;
     h2 {
         display: flex;
         align-items: center;
-        margin: 4vw 0 1vw;
+        margin: 4vw 0 1vw 4vw;
         @include desktop {
             margin-left: 1.75vw;
+            margin-top: 3vw;
         }
     }
 
@@ -65,7 +66,10 @@ $monitor: 1024px;
 }
 
 .benefit {
-    background-color: #fafafa;
+    background-color: #ffffff;
+    @include desktop {
+        background-color: #fafafa;
+    }
 }
 
 @include desktop {

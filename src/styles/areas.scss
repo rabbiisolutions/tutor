@@ -1,5 +1,5 @@
 $desktop: 800px;
-$monitor: 1192px;
+$monitor: 1024px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -14,7 +14,7 @@ $monitor: 1192px;
 }
 
 .area-image {
-    width: 100%;
+    width: 35%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -22,19 +22,26 @@ $monitor: 1192px;
     z-index: 15;
     vertical-align: baseline;
     left: 2.25vw;
-    top: 2.25vw;
-    @include desktop {
+    top: 1vw;
+    margin-right: 9vw;
+    @include monitor {
         margin-right: 6vw;
         width: 60%;
+        left: 2.25vw;
+        top: 2.25vw;
     }
 }
 
 #area-list {
     .area {
-        @include desktop {
-            display: flex;
-            margin-bottom: 12vw;
-            align-items: center;
+        display: flex;
+        align-items: center;
+        margin-bottom: 12vw;
+
+        .text {
+            width: 55%;
+        }
+        @include monitor {
 
             .text {
                 width: 75%;
@@ -42,19 +49,20 @@ $monitor: 1192px;
         }
     }
     .area:nth-child(even) {
+        flex-direction: row-reverse;
+        .area-image {
+            margin-right: 0;
+            margin-left: 5vw;
+            left: 0;
+        }
         @include desktop {
-            flex-direction: row-reverse;
-            .area-image {
-                margin-right: 0;
-                margin-left: 5vw;
-                left: 0;
-            }
         }
     }
 
     .area:nth-child(7) {
+        margin-bottom: 0;
         @include desktop {
-            margin-bottom: 0;
+
         }
     }
 }
@@ -75,13 +83,18 @@ $monitor: 1192px;
 
 .area {
     position: relative;
-    width: 70%;
+    width: 90%;
+
+    @include monitor {
+        width: 70%;
+        margin: 6rem auto;
+    }
     hr {
         width: 70px;
         border: 2px solid #27A1DA;
         margin-left: 0;
     }
-    margin: 6rem auto;
+    margin: 2rem auto;
 
     p {
         @include desktop {
@@ -107,8 +120,8 @@ $monitor: 1192px;
     border-radius: 5px;
     content: "";
     display: block;
-    max-width: 56vw;
-    max-height: 44vw;
+    max-width: 30vw;
+    max-height: 30vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -116,16 +129,16 @@ $monitor: 1192px;
     height: 85%;
     z-index: 0;
 
-    @include desktop {
+    @include monitor {
         max-width: 28vw;
         max-height: 29.75vw;
     }
 }
 
 .area:nth-child(even)::after {
-    left: 25vw;
+    left: 63vw;
 
-    @include desktop {
+    @include monitor {
         left: 43.5vw;
     }
 }

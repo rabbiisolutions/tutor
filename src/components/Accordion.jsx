@@ -5,8 +5,14 @@ import upIcon from "../assets/icons/collapse/bx_bx-caret-downup.svg";
 import React from "react";
 import texts from "../constants/texts";
 import Teachers from "./Teachers";
+import Benefits from "./Benefits";
 import Refer from "./Refer";
 import Discount from "./Discount";
+import HowToBe from "./HowToBe";
+import MobileAreas from "./MobileAreas";
+import howToBeATutor from "../assets/icons/become/mobile.svg"
+import { BrowserRouter as Router } from 'react-router-dom';
+import Landing from "./Landing";
 
 const Content = (data) => {
   return (
@@ -27,16 +33,26 @@ const Toggle = (title) => {
 
 const Accordion = () => {
   return (
-      <section id={'mobile-collapse'} className={'accordion'}>
-        <p id={'accordion-lead'}>
-          The overall cost of tuition is dependent on the type of teachers and tuition you choose
-        </p>
-        {Toggle(texts.titles[0])}
-        {Content(<Teachers/>)}
-        {Toggle(texts.titles[2])}
-        {Content(<Discount/>)}
-        <Refer/>
-      </section>
+      <Router>
+        <section id={'mobile-landing'}>
+          <Landing/>
+        </section>
+        <section id={'mobile-collapse'} className={'accordion'}>
+          <p id={'accordion-lead'}>
+            tap a section to expand or collapse it
+          </p>
+          {Toggle(texts.titles[0])}
+          {Content(<Teachers/>)}
+          {Toggle(texts.titles[1])}
+          {Content(<Benefits/>)}
+          {<MobileAreas/>}
+          {Toggle(texts.titles[3])}
+          {Content(<HowToBe icon={howToBeATutor}/>)}
+          {Toggle(texts.titles[4])}
+          {Content(<Discount/>)}
+          <Refer/>
+        </section>
+      </Router>
   )
 };
 
