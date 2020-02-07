@@ -125,6 +125,7 @@ main {
 .btn-link:hover {
     background-color: color(white);
     color: color(curiosBlue);
+    transition: all .5s ease-in-out;
 }
 
 .tutor-btn {

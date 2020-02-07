@@ -98,6 +98,9 @@ $monitor: 1024px;
 
     p {
         @include desktop {
+            font-size: 2vw;
+        }
+        @include monitor {
             font-size: 1.5vw;
         }
         font-weight: 300;
@@ -106,6 +109,9 @@ $monitor: 1024px;
     li {
         margin: 1vw 0;
         @include desktop {
+            font-size: 1.5vw;
+        }
+        @include monitor {
             font-size: 1.125vw;
         }
     }

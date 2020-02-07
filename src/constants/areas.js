@@ -65,7 +65,7 @@ const sports = {
   title: 'Sports Games', icon: cup,
   desc: [
     {key: 'x7',
-      values: 'We provide professional trainers to help you or' +
+      value: 'We provide professional trainers to help you or' +
           ' your child grow in certain sports & games.'},
     {key: 'x8', value: ' You can get a tutor in:'}],
   examples: ListItem(
@@ -79,7 +79,7 @@ const language = {
   title: 'Foreign Languages', icon: speak,
   desc: [
     {key: 'x9',
-      values: 'We provide teachers in foreign language to' +
+      value: 'We provide teachers in foreign language to' +
           ' help you learn or master a foreign language.'},
     {key: 'x10', value: 'You can get a tutor in:'}],
   examples: ListItem(
