@@ -1,4 +1,4 @@
-import sectionCollapseHandler from "../events/collapse";
+import collapseHandler from "../events/collapse";
 import Icon from "./basic/Icon";
 import downIcon from "../assets/icons/collapse/bx_bx-caret-downdown.svg";
 import upIcon from "../assets/icons/collapse/bx_bx-caret-downup.svg";
@@ -24,7 +24,7 @@ const Content = (data) => {
 
 const Toggle = (title) => {
   return (
-      <div className="collapse-toggle" onClick={e => sectionCollapseHandler(e)}>
+      <div className="collapse-toggle" onClick={e => collapseHandler.sectionCollapseHandler(e)}>
         <span className="collapse-title">{title}</span>
         <Icon src={downIcon} height={1.5} width={1.5} className="down"/>
         <Icon src={upIcon} height={1.2} width={1.2} className="up hidden"/>

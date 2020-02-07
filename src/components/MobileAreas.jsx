@@ -2,7 +2,7 @@ import React from "react";
 import areas from "../constants/areas";
 import ButtonLink from "./basic/ButtonLink";
 import Icon from "./basic/Icon";
-import sectionCollapseHandler from "../events/collapse";
+import collapseHandler from "../events/collapse";
 import downIcon from "../assets/icons/collapse/bx_bx-caret-downdown.svg";
 import upIcon from "../assets/icons/collapse/bx_bx-caret-downup.svg";
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -17,7 +17,7 @@ const Content = (data) => {
 
 const Toggle = (title) => {
   return (
-      <div className="area-toggle" onClick={e => sectionCollapseHandler(e)}>
+      <div className="area-toggle" onClick={e => collapseHandler.areaCollapseHandler(e)}>
         <span className="area-title">{title}</span>
         <Icon src={downIcon} height={1.5} width={1.5} className="down"/>
         <Icon src={upIcon} height={1.5} width={1.5} className="up hidden"/>
