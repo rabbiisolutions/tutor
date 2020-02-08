@@ -61,7 +61,7 @@ const scrollToView = (element) => {
     if (element.previousElementSibling.previousElementSibling.classList[0] === 'collapse-content') {
       // the become our tutor element follows tuition areas service that's not a collapse, the
       // scroll will be too far away from the collapse
-      element.previousElementSibling.childNodes[1].childNodes[5].scrollIntoView();
+      element.previousElementSibling.childNodes[1].childNodes[7].scrollIntoView();
       // hence scroll to the second last element of the tuition area list
     } else {
       // for other section collapse scroll the (two)2 PLACES up sibling

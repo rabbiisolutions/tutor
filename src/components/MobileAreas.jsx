@@ -53,70 +53,18 @@ const Area = (props) => {
 
 const AreasCollapse = () => {
   const collapses = [];
-  collapses.push(
-      <div className={name} key={'a11'}>
-        {Toggle('1. ' + areas.kcse.title)}
-        {
-          Content(
-              <Area desc={areas.kcse.desc} examples={areas.kcse.examples}
-                       icon={areas.kcse.icon} link={areas.kcse.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a12'}>
-        {Toggle('2. ' + areas.international.title)}
-        {
-          Content(
-              <Area desc={areas.international.desc} examples={areas.international.examples}
-                       icon={areas.international.icon} link={areas.international.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a13'}>
-        {Toggle('3. ' + areas.tests.title)}
-        {
-          Content(
-              <Area desc={areas.tests.desc} examples={areas.tests.examples}
-                       icon={areas.tests.icon} link={areas.tests.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a14'}>
-        {Toggle('4. ' + areas.sports.title)}
-        {
-          Content(
-              <Area desc={areas.sports.desc} examples={areas.sports.examples}
-                       icon={areas.sports.icon} link={areas.sports.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a15'}>
-        {Toggle('5. ' + areas.language.title)}
-        {
-          Content(
-              <Area desc={areas.language.desc} examples={areas.language.examples}
-                       icon={areas.language.icon} link={areas.language.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a16'}>
-        {Toggle('6. ' + areas.hobbies.title)}
-        {
-          Content(
-              <Area desc={areas.hobbies.desc} examples={areas.hobbies.examples}
-                       icon={areas.hobbies.icon} link={areas.hobbies.link}/>)
-        }
-      </div>
-      ,
-      <div className={name} key={'a17'}>
-        {Toggle('7. ' + areas.specialNeeds.title)}
-        {
-          Content(
-              <Area desc={areas.specialNeeds.desc} examples={areas.specialNeeds.examples}
-                       icon={areas.specialNeeds.icon} link={areas.specialNeeds.link}/>)
-        }
-      </div>
-  );
+  for (let i = 1; i <= 8; i++) {
+    collapses.push(
+        <div className={name} key={'a1' + i}>
+          {Toggle(i + '. ' + areas[i-1].value.title)}
+          {
+            Content(
+                <Area desc={areas[i-1].value.desc} examples={areas[i-1].value.examples}
+                      icon={areas[i-1].value.icon} link={areas[i-1].value.link} key={areas[i-1].key}/>)
+          }
+        </div>
+    )
+  }
 
   return ( // return the academic areas list
       collapses.map((panel) => (panel))

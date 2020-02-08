@@ -24,8 +24,9 @@ import wheelchair from "../assets/icons/areas/wheelchair.svg";
 const kcse = {
   title: 'KCPE/KCSE', icon: student,
   desc: [{key: 'x1',
-    value: 'We provide competent teachers to help your child revise for the national exams'},
-    {key: 'x2', value: 'Get a tutor for any class in:'}],
+    value: 'Are you a competent teacher able to help a child revise for the national exams and ' +
+        'revise difficult concepts in their schoolwork?'},
+    {key: 'x2', value: 'Then be a tutor in any class in:'}],
   examples: ListItem(
       [
         {key: 'aaa', text: 'Primary school'}, {key: 'aab', text: 'High school'},
@@ -39,8 +40,9 @@ const international = {
   title: 'International School Systems', icon: graduated,
   desc: [
     {key: 'x3',
-      value: 'We provide teachers teaching different international schools & ready to help your child'},
-    {key: 'x4', value: 'Get a tutor in:'}],
+      value: 'Are you a teacher employed in or can work at an international school? Are you willing ' +
+          'and able to help a child from such a system with schoolwork?'},
+    {key: 'x4', value: 'Then be a tutor in either of the curricular below:'}],
   examples: ListItem(
       [{key: 'c1', text: 'IGCSE'}, {key: 'c2', text: 'American'}, {key: 'c3', text: 'IB...etc'}]
   ),
@@ -51,9 +53,8 @@ const tests = {
   title: 'Tests', icon: exam,
   desc: [
     {key: 'x5',
-      value: 'We help you pass your KASNEB exams or any university exam ' +
-          'or any tests to join universities abroad'},
-    {key: 'x6', value: 'Get a tutor for:'}],
+      value: 'Did you pass your KASNEB exams or any university exam or any tests to join universities abroad?'},
+    {key: 'x6', value: 'Then be a tutor in:'}],
   examples: ListItem(
       [{key: 'd1', text: 'CPA exams'}, {key: 'd2', text: 'CIFA exams'}, {key: 'd3', text: 'SAT'},
         {key: 'd4', text: 'ACT'}, {key: 'd5', text: 'Statistics...etc'}]
@@ -65,9 +66,9 @@ const sports = {
   title: 'Sports Games', icon: cup,
   desc: [
     {key: 'x7',
-      value: 'We provide professional trainers to help you or' +
-          ' your child grow in certain sports & games.'},
-    {key: 'x8', value: ' You can get a tutor in:'}],
+      value: 'Are you a master in a certain sport or game? Can you teach and mentor a person from an' +
+          ' amateur level to be able to master the skill?'},
+    {key: 'x8', value: 'Then become a tutor in:'}],
   examples: ListItem(
       [{key: 'b1', text: 'Chess'}, {key: 'b2', text: 'Swimming'},
         {key: 'b3', text: 'Skating...etc'}]
@@ -79,9 +80,10 @@ const language = {
   title: 'Foreign Languages', icon: speak,
   desc: [
     {key: 'x9',
-      value: 'We provide teachers in foreign language to' +
-          ' help you learn or master a foreign language.'},
-    {key: 'x10', value: 'You can get a tutor in:'}],
+      value: 'Are you good at writing and speaking a foreign language? Can you train and teach ' +
+          'someone who has never spoken that language to sit for an international exam for ' +
+          'certification in that language?\n'},
+    {key: 'x10', value: 'Then become a tutor in:'}],
   examples: ListItem(
       [{key: 'a1', text: 'Chinese'}, {key: 'a2', text: 'French'},
         {key: 'a3', text: 'German etc'}]
@@ -116,10 +118,26 @@ const specialNeeds = {
   images: {jpeg: specialJpeg, webp: specialWebp},
   link: "#"
 };
-
-const areas = {
-  kcse: kcse, international: international, tests: tests, sports: sports, language: language,
-  hobbies: hobbies, specialNeeds: specialNeeds
+const proAppSoftware = {
+  title: 'Professional Application Software', icon: '',
+  desc: [
+    {key:'x14', value: 'Are you well skilled in any professional application software? Can you train' +
+          ' a person to master or learn how to use that professional application software?'},
+    {key: 'x15', value: 'Then become a tutor in: '}
+          ],
+  examples: ListItem(
+      [{key: 'g4', text: 'Programming languages'}, {key: 'g5', text: 'CAD/CAM'},
+        {key: 'g6', text: 'QuickBooks'}, {key: 'g7', text: 'SAGE … etc.'}]
+  ),
+  images: {jpeg: '', webp: ''},
+  link: "#"
 };
+
+const areas = [
+    {key: 'a1', value: kcse}, {key: 'a2', value: international},
+    {key: 'a3', value: tests}, {key: 'a4', value: sports},
+    {key: 'a5', value: language}, {key: 'a6', value: hobbies},
+    {key: 'a7', value: specialNeeds}, {key: 'a8', value: proAppSoftware}
+];
 
 export default areas;
