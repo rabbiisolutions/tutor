@@ -43,7 +43,7 @@ const Areas = () => {
           {areas.map((area) => (
               <Area
                   jpeg={area.value.images.jpeg} webp={area.value.images.jpeg}
-                  alt={'kcse-student'} title={area.value.title}
+                  alt={'area-photo'} title={area.value.title}
                   desc={area.value.desc} link={area.value.link}
                   list={area.value.examples} key={area.key}
               />
