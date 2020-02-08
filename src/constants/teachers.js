@@ -23,8 +23,8 @@ const premium = {
       ' their peers and have had a vast experience teaching at top national and private schools.'
 };
 
-const teachers = {
-  premium: premium, plus: plus, choice: choice, basic: basic
-};
+const teachers = [
+  {key: 't4', value: basic}, {key: 't3', value: choice}, {key: 't2', value: plus}, {key: 't1', value: premium}
+];
 
 export default teachers;

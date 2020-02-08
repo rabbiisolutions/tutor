@@ -19,10 +19,10 @@ const Benefits = () => {
   return (
       <Router>
         <div id={'benefit-list'}>
-          <Benefit icon={benefits.trusted.icon} title={benefits.trusted.title} desc={benefits.trusted.desc}/>
-          <Benefit icon={benefits.income.icon} title={benefits.income.title} desc={benefits.income.desc}/>
-          <Benefit icon={benefits.relationship.icon} title={benefits.relationship.title} desc={benefits.relationship.desc}/>
-          <Benefit icon={benefits.support.icon} title={benefits.support.title} desc={benefits.support.desc}/>
+          {benefits.map((benefit) => (
+              <Benefit icon={benefit.value.icon} title={benefit.value.title}
+                       desc={benefit.value.desc} key={benefit.key}/>
+          ))}
         </div>
       </Router>
   );

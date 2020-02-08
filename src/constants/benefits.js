@@ -30,8 +30,9 @@ const support = {
       ' we can meet at a place of convenience.'
 };
 
-const benefits = {
-  support: support, relationship: relationship, income: income, trusted: trusted
-};
+const benefits = [
+    {key: 'b1', value: support}, {key: 'b2', value: relationship},
+    {key: 'b3', value: income}, {key: 'b4', value: trusted}
+];
 
 export default benefits;
