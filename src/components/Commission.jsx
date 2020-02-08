@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import teacher from "../assets/icons/discount/teacher.svg";
-import discount from "../constants/discount";
+import commission from "../constants/commission";
 import React from "react";
 import Icon from "./basic/Icon";
 import Refer from "./Refer";
@@ -28,34 +28,34 @@ const Timeline = (props) => {
   )
 };
 
-const Discount = () => {
+const Commission = () => {
   return (
       <Router>
-        <p className={'section-desc'}>{discount.tagLine}</p>
+        <p className={'section-desc'}>{commission.tagLine}</p>
         <div id={'timeline'}>
           <div id={'start'}>
             <span id={'circle'}/>
             Start
           </div>
           <div className={'container left'}>
-            <Title title={discount.howItWorks.title}/>
-            <Timeline num={1} desc={discount.howItWorks.list[0]}/>
-            <Timeline num={2} desc={discount.howItWorks.list[1]}/>
-            <Timeline num={3} desc={discount.howItWorks.list[2]}/>
+            <Title title={commission.howItWorks.title}/>
+            <Timeline num={1} desc={commission.howItWorks.list[0]}/>
+            <Timeline num={2} desc={commission.howItWorks.list[1]}/>
+            <Timeline num={3} desc={commission.howItWorks.list[2]}/>
           </div>
           <div className={'container right'}>
-            <Title title={discount.howToRefer.title}/>
-            <Timeline num={1} desc={discount.howToRefer.list[0] + discount.howToRefer.list[1]}/>
-            <Timeline num={2} desc={discount.howToRefer.list[2]}/>
-            <Timeline num={3} desc={discount.howToRefer.list[3]}/>
-            <Timeline num={4} desc={discount.howToRefer.list[4]}/>
-            <Timeline num={5} desc={discount.howToRefer.list[5]}/>
+            <Title title={commission.howToRefer.title}/>
+            <Timeline num={1} desc={commission.howToRefer.list[0] + commission.howToRefer.list[1]}/>
+            <Timeline num={2} desc={commission.howToRefer.list[2]}/>
+            <Timeline num={3} desc={commission.howToRefer.list[3]}/>
+            <Timeline num={4} desc={commission.howToRefer.list[4]}/>
+            <Timeline num={5} desc={commission.howToRefer.list[5]}/>
           </div>
           <div className={'container left'}>
-            <Title title={discount.example.title}/>
-            <Timeline num={1} desc={discount.example.list[0]}/>
-            <Timeline num={2} desc={discount.example.list[1]}/>
-            <Timeline num={3} desc={discount.example.list[2] + discount.example.list[3]}/>
+            <Title title={commission.example.title}/>
+            <Timeline num={1} desc={commission.example.list[0]}/>
+            <Timeline num={2} desc={commission.example.list[1]}/>
+            <Timeline num={3} desc={commission.example.list[2] + commission.example.list[3]}/>
           </div>
         </div>
         <div id={'refer'}>
@@ -65,4 +65,4 @@ const Discount = () => {
   )
 };
 
-export default Discount;
+export default Commission;

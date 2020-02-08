@@ -7,7 +7,7 @@ import texts from "../constants/texts";
 import Teachers from "./Teachers";
 import Benefits from "./Benefits";
 import Refer from "./Refer";
-import Discount from "./Discount";
+import Commission from "./Commission";
 import HowToBe from "./HowToBe";
 import MobileAreas from "./MobileAreas";
 import howToBeATutor from "../assets/icons/become/mobile.svg"
@@ -49,7 +49,7 @@ const Accordion = () => {
           {Toggle(texts.titles[3])}
           {Content(<HowToBe icon={howToBeATutor}/>)}
           {Toggle(texts.titles[4])}
-          {Content(<Discount/>)}
+          {Content(<Commission/>)}
           <Refer/>
         </section>
       </Router>

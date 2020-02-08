@@ -7,7 +7,7 @@ import './styles/accordion.css';
 import './styles/nav-bar.css';
 import './styles/landing.css';
 import './styles/teachers.css';
-import './styles/discount.css';
+import './styles/commission.css';
 import './styles/areas.css';
 import './styles/mobile.css';
 import './styles/become.css';

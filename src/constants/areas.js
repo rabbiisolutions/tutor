@@ -94,8 +94,9 @@ const language = {
 const hobbies = {
   title: 'Hobbies and Interests', icon: drama,
   desc:[
-    {key: 'x11', value: 'We provide trainers to help you grow & perfect a hobby you have.'},
-    {key: 'x12', value: 'You can get a trainer in:'}],
+    {key: 'x11', value: 'Are you an expert at a certain skill? Can you train an amateur and grow' +
+          ' them to master the skill?'},
+    {key: 'x12', value: 'Then become a trainer in:'}],
   examples: ListItem(
       [{key: 'e4', text: 'Photography'}, {key: 'e5', text: 'Dance'},
         {key: 'e6', text: 'Music'}, {key: 'e7', text: 'Art'}, {key: 'e8', text: 'Vocals'},
@@ -107,10 +108,10 @@ const hobbies = {
 const specialNeeds = {
   title: 'Special Needs', icon: wheelchair,
   desc: [
-    {key:'x13', value: 'You can get a qualified trained special needs' +
-          ' teacher for your son or daughter at whatever ' +
-          'level. We have teachers who are able to handle students' +
-          ' who require different level of care in areas such as:'}],
+    {key:'x13', value: 'Are you a qualified special needs tutor? Do you have the time, ability' +
+          ' and willingness to teach a child requiring special care at home?'},
+    {key: 'x14', value: 'Then offer care for students with such needs:'}
+  ],
   examples: ListItem(
       [{key: 'f4', text: 'Physical'}, {key: 'f5', text: 'Developmental'},
         {key: 'f6', text: 'Behavioural/Emotional'}, {key: 'f7', text: 'Sensory/Impaired...etc'}]
@@ -121,10 +122,10 @@ const specialNeeds = {
 const proAppSoftware = {
   title: 'Professional Application Software', icon: '',
   desc: [
-    {key:'x14', value: 'Are you well skilled in any professional application software? Can you train' +
-          ' a person to master or learn how to use that professional application software?'},
-    {key: 'x15', value: 'Then become a tutor in: '}
-          ],
+    {key:'x15', value: 'Are you well skilled in any professional application software? Can you' +
+          ' train a person to master or learn how to use that professional application software?'},
+    {key: 'x16', value: 'Then become a tutor in: '}
+  ],
   examples: ListItem(
       [{key: 'g4', text: 'Programming languages'}, {key: 'g5', text: 'CAD/CAM'},
         {key: 'g6', text: 'QuickBooks'}, {key: 'g7', text: 'SAGE … etc.'}]

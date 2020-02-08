@@ -1,7 +1,7 @@
 import Teachers from "./Teachers";
 import Benefits from "./Benefits";
 import Areas from "./Areas";
-import Discount from "./Discount";
+import Commission from "./Commission";
 import React from "react";
 import texts from "../constants/texts";
 import HowToBe from "./HowToBe";
@@ -32,7 +32,7 @@ const DesktopView = () => {
         </section>
         <section id={'discount'}>
           <h2 className={'section-title'}>{texts.titles[4]}</h2>
-          <Discount/>
+          <Commission/>
         </section>
       </div>
   )
