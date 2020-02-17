@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
 $desktop: 768px;
 $monitor: 1024px;
 
@@ -52,49 +54,59 @@ $monitor: 1024px;
     }
     #dark-box {
         font-size: 5vw;
+        font-family: 'Pacifico', cursive;
+        padding-top: 3vw;
         @include desktop {
-            color: #00C3F0;
+            color: #0E3E77;
             font-size: 2.375vw;
             padding: 1vw;
             text-align: center;
-            background: rgba(0, 0, 0, 0.65);
+            background: rgba(196, 196, 196, 0.58);
             border-radius: 10px;
         }
     }
     p {
         font-weight: bold;
         text-align: center;
+        margin: 0.75vw 0;
         @include desktop{
-            margin: 2vw 1vw;
+            margin: 1vw 1vw;
             text-align: unset;
             font-weight: 600;
         }
     }
     #sign-up {
+        font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
         text-align: center;
         background-color: #ECECEC;
         padding: .5vw 3vw 6vw;
-        margin: 0 auto;
+        margin: 4vw auto 0;
         width: 70%;
         border-radius: 10px;
         @include desktop {
+            margin: 0 auto;
             background-color: unset;
-            padding: 0;
+            padding: 0 0 1.25vw 0;
             width: unset;
+        }
+        @include monitor {
+            padding: 0;
         }
         p {
             font-size: 4.5vw;
             font-weight: 300;
+            text-decoration: unset;
+            margin: 2vw 1vw;
             @include desktop {
-                margin-bottom: 1vw;
+                margin-bottom: 1.75vw;
                 margin-top: 4vw;
-                color: #ffffff;
+                color: #1B2531;
                 font-size: 1.75vw;
                 font-weight: 600;
             }
             @include monitor {
                 margin-bottom: .75vw;
-                margin-top: 5.5vw;
+                margin-top: 4.5vw;
                 font-size: 1.25vw;
             }
         }

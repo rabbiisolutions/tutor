@@ -13,6 +13,8 @@ import hobbiesJpeg from "../assets/images/areas/jCIMcOpFHig-5.jpg";
 import hobbiesWebp from "../assets/images/areas/jCIMcOpFHig-5.webp";
 import gamesJpeg from "../assets/images/areas/jCIMcOpFHig-6.png";
 import gamesWebp from "../assets/images/areas/jCIMcOpFHig-6.webp";
+import proJpeg from "../assets/images/areas/jCIMcOpFHig-7.jpg";
+import proWebp from "../assets/images/areas/jCIMcOpFHig-7.webp";
 import student from "../assets/icons/areas/student.svg";
 import graduated from "../assets/icons/areas/graduated.svg";
 import exam from "../assets/icons/areas/exam.svg"
@@ -20,6 +22,7 @@ import cup from "../assets/icons/areas/cup.svg";
 import speak from "../assets/icons/areas/speak.svg";
 import drama from "../assets/icons/areas/drama.svg";
 import wheelchair from "../assets/icons/areas/wheelchair.svg";
+import design from "../assets/icons/areas/interface.svg";
 
 const kcse = {
   title: 'KCPE/KCSE', icon: student,
@@ -120,7 +123,7 @@ const specialNeeds = {
   link: "#"
 };
 const proAppSoftware = {
-  title: 'Professional Application Software', icon: '',
+  title: 'Professional Application Software', icon: design,
   desc: [
     {key:'x15', value: 'Are you well skilled in any professional application software? Can you' +
           ' train a person to master or learn how to use that professional application software?'},
@@ -130,7 +133,7 @@ const proAppSoftware = {
       [{key: 'g4', text: 'Programming languages'}, {key: 'g5', text: 'CAD/CAM'},
         {key: 'g6', text: 'QuickBooks'}, {key: 'g7', text: 'SAGE … etc.'}]
   ),
-  images: {jpeg: '', webp: ''},
+  images: {jpeg: proJpeg, webp: proWebp},
   link: "#"
 };
 

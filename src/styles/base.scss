@@ -143,10 +143,12 @@ main {
 }
 
 .services {
-    padding: .4rem 1.4rem;
-    font-size: 1.25rem;
+    padding: .4rem 1.2rem;
+    font-size: 1.125rem;
     @include monitor {
         padding: .5rem 1.5rem;
+        font-size: 1.25rem;
+        box-shadow: 0 4px 4px rgba(27, 37, 49, 0.25);
     }
 }
 
@@ -154,6 +156,7 @@ main {
     margin-bottom: 3vw;
     padding: .45rem 1.75rem;
     font-size: 1.5rem;
+    box-shadow: 0 4px 4px rgba(27, 37, 49, 0.25);
     @include desktop {
         margin-bottom: 0;
         font-size: 1.125rem;
