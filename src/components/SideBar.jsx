@@ -52,11 +52,11 @@ class SideBar extends React.Component {
                 <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[3]}</span>
               </a>
-              <a className="menu-item" href="https://trending.rabbii.co.ke/">
+              <a className="menu-item" href="https://faqs.rabbii.co.ke/">
                 <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[4]}</span>
               </a>
-              <a className="menu-item" href="https://faqs.rabbii.co.ke/">
+              <a className="menu-item" href="https://trending.rabbii.co.ke/">
                 <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[5]}</span>
               </a>

@@ -14,7 +14,6 @@ const SignUpModal = (props) => {
           <div id="tutor-btns">
             <ButtonLink link="https://forms.gle/LerPUYib9EJ3yMxr7" className="tutor-btn" value="Non TSC Tutor"/>
             <ButtonLink link="https://forms.gle/ZU8GZrYVPWenL4r19" className="tutor-btn" value="TSC Tutor"/>
-            <ButtonLink link="https://forms.gle/CmgUyZCWrnLgsqnC9" className="tutor-btn" value="Skills Tutor"/>
           </div>
         </section>
         <div className="info">If you face difficulty in registering call, text or WhatsApp on 0772 915 361</div>

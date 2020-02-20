@@ -30,11 +30,11 @@ class NavBar extends React.Component {
                 <span className={'text'}>{texts.menuItems[3]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
-            <a className="nav-item" href="https://trending.rabbii.co.ke/">
+            <a className="nav-item" href="https://faqs.rabbii.co.ke/">
                 <span className={'text'}>{texts.menuItems[4]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
-            <a className="nav-item" href="https://faqs.rabbii.co.ke/">
+            <a className="nav-item" href="https://trending.rabbii.co.ke/">
                 <span className={'text'}>{texts.menuItems[5]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
