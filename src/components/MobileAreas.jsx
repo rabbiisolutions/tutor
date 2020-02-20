@@ -26,10 +26,10 @@ const Toggle = (title) => {
 
 const name = 'areas-collapse';
 
-const GetTutor = (props) => {
+const BeTutor = (props) => {
   return (
       <div className={'be-a-tutor'}>
-        <ButtonLink link={props.link} className="services" value="Get a Tutor"/>
+        <ButtonLink link={props.link} className="services" value="Become a Tutor"/>
       </div>
   )
 };
@@ -46,7 +46,7 @@ const Area = (props) => {
           {props.examples}
           <Icon src={props.icon} height={15} units={'vw'} width={15}/>
         </div>
-        <GetTutor link={props.link}/>
+        <BeTutor link={props.link}/>
       </Router>
   );
 };
