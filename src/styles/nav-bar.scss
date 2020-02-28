@@ -62,29 +62,6 @@ $desktop: 800px;
         transform: scale(1.1);
     }
 
-    button {
-        -webkit-border-radius: $webkitRadius;
-        border-radius: $borderRadius;
-        background-color: #0071A5;
-        color: #FFFFFF;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #0071A5;
-        @include desktop {
-            border-width: 2px;
-            padding: .5em 1.5em;
-        }
-        padding: .4em 1.5em;
-        cursor: $pointer;
-        font-size: $font16;
-        margin: 8px 0;
-    }
-
-    button:hover {
-        transform: scale(1.1);
-        transition: all .5s ease-in-out;
-    }
-
     .toggle span{
         fill: color(mirage);
         cursor: $pointer;
@@ -188,5 +165,13 @@ $desktop: 800px;
             transform: scale(0.95);
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         }
+    }
+
+    button {
+        @include desktop {
+            padding: .5em 1.5em;
+        }
+        padding: .4em 1.5em;
+        font-size: $font16;
     }
 }

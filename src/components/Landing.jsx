@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import mobileJpeg from "../assets/images/landing/mobile.jpg";
 import mobileWebp from "../assets/images/landing/mobile.webp";
 import texts from "../constants/texts";
-import ButtonLink from "./basic/ButtonLink";
+import Button from "./basic/Button";
 import React from "react";
 import ImageWebp from "../helpers/ImageWebp";
 
@@ -24,7 +24,7 @@ const Landing = () => {
             <p>{texts.quotes[3]}</p>
             <div id={'sign-up'}>
               <p className={'lead'}>Sign up to receive our price list (teacher/tutor only)</p>
-              <ButtonLink value={texts.signUp} link={"#"} className="services"/>
+              <Button value={texts.signUp}/>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ import './styles/mobile.css';
 import './styles/become.css';
 import './styles/footer.css';
 import './styles/side-bar.css';
-import './styles/signup-modal.css';
+import './styles/forms-modal.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

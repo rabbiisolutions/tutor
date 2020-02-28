@@ -3,10 +3,10 @@ import Icon from "./basic/Icon";
 import toggle from "../assets/icons/menu.svg"
 import Button from "./basic/Button";
 import texts from "../constants/texts";
-import signUpHandler from "../events/SignUpModal";
 import menuToggle from "../events/MenuToggle";
 import logo from "../assets/icons/logo.svg";
 import {useCookies} from "react-cookie";
+import modals from "../events/modals";
 
 const Logo = (props) => {
   return (
@@ -46,7 +46,7 @@ class NavBar extends React.Component {
                 <span className={'text'}>{texts.menuItems[1]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
-            <a className="nav-item active" href="#landing">
+            <a className="nav-item active" href={"#landing"}>
                 <span className={'text'}>{texts.menuItems[2]}</span>
               <span className={'active'}>&nbsp;</span>
             </a>
@@ -63,7 +63,7 @@ class NavBar extends React.Component {
               <span className={'active hidden'}>&nbsp;</span>
             </a>
         </span>
-        <Button value={texts.signUp} onClick={e => signUpHandler(e)}/>
+        <Button value={texts.signUp} onClick={e => modals.tutorForms(e)}/>
         <div className={'right'}>
           <Toggle/>
         </div>

@@ -37,8 +37,11 @@ const kcse = {
       ]
   ),
   images: {jpeg: kcseJpeg, webp: kcseWebp},
-  link: "https://forms.gle/QmymkkD1zAfSJqNF6"
-};
+  links: [
+      {key: 'k1', link: "https://forms.gle/LerPUYib9EJ3yMxr7", value: "TSC Tutor"},
+    {key: 'k2', link: "https://forms.gle/LerPUYib9EJ3yMxr7", value: "Non TSC Tutor"}
+  ]
+  };
 const international = {
   title: 'International School Systems', icon: graduated,
   desc: [
@@ -50,7 +53,7 @@ const international = {
       [{key: 'c1', text: 'IGCSE'}, {key: 'c2', text: 'American'}, {key: 'c3', text: 'IB...etc'}]
   ),
   images: {jpeg: interJpeg, webp: interWebp},
-  link: "https://forms.gle/UHdTUnAE5ThJRDuF7"
+  links: [{key: 'i1', link: "https://forms.gle/UHdTUnAE5ThJRDuF7"}]
 };
 const tests = {
   title: 'Tests', icon: exam,
@@ -63,7 +66,7 @@ const tests = {
         {key: 'd4', text: 'ACT'}, {key: 'd5', text: 'Statistics...etc'}]
   ),
   images: {jpeg: testsJpeg, webp: testsWebp},
-  link: "https://forms.gle/uoWupEGS6p4VbLzdA"
+  links: [{key: 't1', link: "https://forms.gle/uoWupEGS6p4VbLzdA"}]
 };
 const sports = {
   title: 'Sports Games', icon: cup,
@@ -77,7 +80,7 @@ const sports = {
         {key: 'b3', text: 'Skating...etc'}]
   ),
   images: {jpeg: gamesJpeg, webp: gamesWebp},
-  link: "https://forms.gle/ZNFbAHaBWhEsSwMCA"
+  links: [{key: 's1', link: "https://forms.gle/ZNFbAHaBWhEsSwMCA"}]
 };
 const language = {
   title: 'Foreign Languages', icon: speak,
@@ -92,7 +95,7 @@ const language = {
         {key: 'a3', text: 'German etc'}]
   ),
   images: {jpeg: languageJpeg, webp: languageWebp},
-  link: "https://forms.gle/eensLnyf6FbTqCks7"
+  links: [{key: 'h1', link: "https://forms.gle/eensLnyf6FbTqCks7"}]
 };
 const hobbies = {
   title: 'Hobbies and Interests', icon: drama,
@@ -106,7 +109,7 @@ const hobbies = {
         {key: 'e9', text: 'Dj...etc'}]
   ),
   images: {jpeg: hobbiesJpeg, webp: hobbiesWebp},
-  link: "https://forms.gle/nPNLZ4jnyqW35yGM9"
+  links: [{key: 'h1', link: "https://forms.gle/nPNLZ4jnyqW35yGM9"}]
 };
 const specialNeeds = {
   title: 'Special Needs', icon: wheelchair,
@@ -120,7 +123,7 @@ const specialNeeds = {
         {key: 'f6', text: 'Behavioural/Emotional'}, {key: 'f7', text: 'Sensory/Impaired...etc'}]
   ),
   images: {jpeg: specialJpeg, webp: specialWebp},
-  link: "https://forms.gle/QGWv8Tr9kDp8Sc9K9"
+  links: [{key: 'sn1', link: "https://forms.gle/QGWv8Tr9kDp8Sc9K9"}]
 };
 const proAppSoftware = {
   title: 'Professional Application Software', icon: design,
@@ -134,7 +137,7 @@ const proAppSoftware = {
         {key: 'g6', text: 'QuickBooks'}, {key: 'g7', text: 'SAGE … etc.'}]
   ),
   images: {jpeg: proJpeg, webp: proWebp},
-  link: "https://forms.gle/K42KuUqoe2mJCpu27"
+  links: [{key: 'pas1', link: "https://forms.gle/K42KuUqoe2mJCpu27"}]
 };
 
 const areas = [

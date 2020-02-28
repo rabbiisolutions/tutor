@@ -4,10 +4,13 @@ import ImageWebp from "../helpers/ImageWebp";
 import ButtonLink from "./basic/ButtonLink.jsx";
 import { BrowserRouter as Router } from 'react-router-dom';
 
-const GetTutor = (props) => {
+const GetTutor = (links) => {
   return (
       <div className={'become-a-tutor'}>
-        <ButtonLink link={props.link} className="services" value="Become a Tutor"/>
+        { links.map((link) => (
+            <ButtonLink link={link.link} key={link.key} className="services"
+                        value={ link.value ? link.value : "Become a Tutor"}/>
+        ))}
       </div>
   )
 };
@@ -30,7 +33,7 @@ const Area = (props) => {
           <hr/>
           {Desc(props.desc)}
           {props.list}
-          <GetTutor link={props.link}/>
+          {GetTutor(props.links)}
         </div>
       </div>
   )
@@ -44,7 +47,7 @@ const Areas = () => {
               <Area
                   jpeg={area.value.images.jpeg} webp={area.value.images.jpeg}
                   alt={'area-photo'} title={area.value.title}
-                  desc={area.value.desc} link={area.value.link}
+                  desc={area.value.desc} links={area.value.links}
                   list={area.value.examples} key={area.key}
               />
           ))}

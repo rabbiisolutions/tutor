@@ -142,6 +142,17 @@ main {
     border-width: 2px;
 }
 
+%buttons {
+    background-color: #0071A5;
+    color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0071A5;
+    @include desktop {
+        border-width: 2px;
+    }
+}
+
 .services {
     padding: .4rem 1.2rem;
     font-size: 1.125rem;
@@ -153,6 +164,7 @@ main {
 }
 
 .refer {
+    @extend %buttons;
     margin-bottom: 3vw;
     padding: .45rem 1.75rem;
     font-size: 1.5rem;
@@ -163,6 +175,11 @@ main {
     }
     @include monitor {
         font-size: 1.5rem;
+    }
+    &:hover {
+        background-color: #0071A5;
+        color: #FFFFFF;
+        text-decoration: none;
     }
 }
 
@@ -209,3 +226,25 @@ main {
     }
 }
 
+button {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    background-color: #0071A5;
+    color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0071A5;
+    @include desktop {
+        border-width: 2px;
+    }
+    cursor: $pointer;
+    margin: 8px 0;
+    &:focus {
+        outline: 0 !important;
+    }
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
