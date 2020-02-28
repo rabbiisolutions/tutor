@@ -26,10 +26,13 @@ const Toggle = (title) => {
 
 const name = 'areas-collapse';
 
-const BeTutor = (props) => {
+const BeTutor = (links) => {
   return (
       <div className={'be-a-tutor'}>
-        <ButtonLink link={props.link} className="services" value="Become a Tutor"/>
+        { links.map((link) => (
+            <ButtonLink link={link.link} key={link.key} className="services"
+                        value={ link.value ? link.value : "Become a Tutor"}/>
+        ))}
       </div>
   )
 };
@@ -46,7 +49,7 @@ const Area = (props) => {
           {props.examples}
           <Icon src={props.icon} height={15} units={'vw'} width={15}/>
         </div>
-        <BeTutor link={props.link}/>
+        {BeTutor(props.links)}
       </Router>
   );
 };
@@ -60,7 +63,7 @@ const AreasCollapse = () => {
           {
             Content(
                 <Area desc={areas[i-1].value.desc} examples={areas[i-1].value.examples}
-                      icon={areas[i-1].value.icon} link={areas[i-1].value.link} key={areas[i-1].key}/>)
+                      icon={areas[i-1].value.icon} links={areas[i-1].value.links} key={areas[i-1].key}/>)
           }
         </div>
     )

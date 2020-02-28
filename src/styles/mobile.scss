@@ -12,6 +12,14 @@ $colors: (
     @return map_get($colors, $name);
 }
 
+$inline: 400px;
+
+@mixin inline {
+    @media (min-width: #{$inline}) {
+        @content;
+    }
+}
+
 $pointer: pointer;
 
 
@@ -25,6 +33,13 @@ $pointer: pointer;
 
     .be-a-tutor {
         text-align: center;
+        .services {
+            margin-bottom: 5vw;
+            margin-right: 2.5vw;
+            @include inline {
+                margin-bottom: 0;
+            }
+        }
     }
 
     #areas-title {
