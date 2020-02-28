@@ -5,6 +5,7 @@ import texts from "../constants/texts";
 import Button from "./basic/Button";
 import React from "react";
 import ImageWebp from "../helpers/ImageWebp";
+import modals from "../events/modals";
 
 
 const Landing = () => {
@@ -24,7 +25,7 @@ const Landing = () => {
             <p>{texts.quotes[3]}</p>
             <div id={'sign-up'}>
               <p className={'lead'}>Sign up to receive our price list (teacher/tutor only)</p>
-              <Button value={texts.signUp}/>
+              <Button value={texts.signUp} onClick={e => modals.tutorForms(e)}/>
             </div>
           </div>
         </div>

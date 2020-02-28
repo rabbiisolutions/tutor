@@ -167,7 +167,7 @@ main {
     @extend %buttons;
     margin-bottom: 3vw;
     padding: .45rem 1.75rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     box-shadow: 0 4px 4px rgba(27, 37, 49, 0.25);
     @include desktop {
         margin-bottom: 0;
@@ -229,11 +229,7 @@ main {
 button {
     -webkit-border-radius: $webkitRadius;
     border-radius: $borderRadius;
-    background-color: #0071A5;
-    color: #FFFFFF;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #0071A5;
+    @extend %buttons;
     @include desktop {
         border-width: 2px;
     }
