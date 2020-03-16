@@ -4,7 +4,7 @@ import modals from "../events/modals";
 import Icon from "./basic/Icon";
 
 const areas = [
-  {title: 'TSC Tutor (KCPE/KCSE)', link: "https://forms.gle/LerPUYib9EJ3yMxr7", key: "a1"},
+  {title: 'TSC Tutor (KCPE/KCSE)', link: "https://forms.gle/1iWLZk6QLMLE4BPU7", key: "a1"},
   {title: 'Non TSC Tutor (KCPE/KCSE)', link: "https://forms.gle/LerPUYib9EJ3yMxr7", key: "a2"},
   {title: 'International School Systems', link: "https://forms.gle/UHdTUnAE5ThJRDuF7", key: "a3"},
   {title: 'Tests', link: "https://forms.gle/uoWupEGS6p4VbLzdA", key: "a4"},

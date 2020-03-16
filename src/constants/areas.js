@@ -38,7 +38,7 @@ const kcse = {
   ),
   images: {jpeg: kcseJpeg, webp: kcseWebp},
   links: [
-      {key: 'k1', link: "https://forms.gle/LerPUYib9EJ3yMxr7", value: "TSC Tutor"},
+      {key: 'k1', link: "https://forms.gle/1iWLZk6QLMLE4BPU7", value: "TSC Tutor"},
     {key: 'k2', link: "https://forms.gle/LerPUYib9EJ3yMxr7", value: "Non TSC Tutor"}
   ]
   };
