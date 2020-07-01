@@ -1,6 +1,6 @@
 const signUp = 'Sign Up';
 const menuTitle = 'Menu';
-const menuItems = ['Home', 'Payment', 'Become a Tutor', 'About Us', 'FAQs', 'Trending'];
+const menuItems = ['Home', 'Become a Tutor', 'About Us', 'FAQs', 'Blog', 'Trending'];
 const titles = ['Types of teachers', 'why rabbii', 'tuition areas', 'become our tutor', 'earn a' +
 ' commission'];
 const hidden = 'hidden';

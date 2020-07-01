@@ -42,13 +42,17 @@ class SideBar extends React.Component {
               </a>
               <a className="menu-item active" href={"#mobile-landing"} onClick={e => this.menuHandler(e)}>
                 <span className={'activated'}>&nbsp;</span>
-                <span className={'text'}>{texts.menuItems[2]}</span>
+                <span className={'text'}>{texts.menuItems[1]}</span>
               </a>
               <a className="menu-item" href={"https://about.rabbii.co.ke"}>
                 <span className={'activated hidden'}>&nbsp;</span>
-                <span className={'text'}>{texts.menuItems[3]}</span>
+                <span className={'text'}>{texts.menuItems[2]}</span>
               </a>
               <a className="menu-item" href="https://faqs.rabbii.co.ke/">
+                <span className={'activated hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[3]}</span>
+              </a>
+              <a className="menu-item" href="https://blog.rabbii.co.ke/">
                 <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[4]}</span>
               </a>
